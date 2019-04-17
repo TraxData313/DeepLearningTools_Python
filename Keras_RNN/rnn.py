@@ -12,8 +12,9 @@ import pandas as pd
 # Importing the training set
 dataset_train = pd.read_csv('Google_Stock_Price_Train.csv')
 training_set = dataset_train.iloc[:, 1:2].values
+# - [:, 1:2] : we are taking only the first col, but this way it will be the needed size
 
-# Feature Scaling
+# Feature Scaling : MinMax recommended (0<x<1)
 from sklearn.preprocessing import MinMaxScaler
 sc = MinMaxScaler(feature_range = (0, 1))
 training_set_scaled = sc.fit_transform(training_set)
