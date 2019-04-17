@@ -1,5 +1,6 @@
 # Used libraryes:
 - Keras
+- PyTorch
 - sklearn
 - pandas
 - numpy
